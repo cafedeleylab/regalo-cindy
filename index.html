@@ -22,6 +22,7 @@
   <meta name="twitter:image" content="https://regalo-cindy.vercel.app/og-cindy-box.png">
   <style>
     * { box-sizing: border-box; }
+    html { overflow-x: hidden; }
     :root { color-scheme: light; }
     body {
       margin: 0;
@@ -196,8 +197,8 @@
       text-wrap: balance;
     }
     .invitation strong { font-weight: 700; color: #fff; }
-    .reveal.finished { overflow-y: auto; background: #000; pointer-events: auto; }
-    .reveal.finished .reveal-content { position: relative; min-height: 100svh; }
+    .reveal.finished { overflow-x: hidden; overflow-y: auto; overscroll-behavior-x: none; touch-action: pan-y; -webkit-overflow-scrolling: touch; background: #000; pointer-events: auto; }
+    .reveal.finished .reveal-content { position: relative; min-height: 100svh; max-width: 100%; }
     .reveal.finished .card-flight { top: var(--final-card-center, 40svh); }
     .reveal.finished .reveal-details { top: calc(var(--final-card-center, 40svh) + min(26.7vw, 209px, 20.9svh) + 18px); }
     .location-button {
